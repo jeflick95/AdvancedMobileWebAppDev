@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="http://sotd.us/jordanflickinger/AdvancedWebAppDev/Module3/favicon.ico">
+
+    <title>FormExample</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="http://sotd.us/jordanflickinger/AdvancedWebAppDev/Module3/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="http://sotd.us/jordanflickinger/AdvancedWebAppDev/Module3/assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="http://sotd.us/jordanflickinger/AdvancedWebAppDev/Module3/jumbotron.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="http://sotd.us/jordanflickinger/AdvancedWebAppDev/Module3/assets/js/ie-emulation-modes-warning.js"></script>
+
+    <button class="alert">Click Me</button>
+
+    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script>
+       // trigger when button click
+       $('.alert').on('click', function(){
+        toastr["success"]("You have successfully logged into the service, and will be redirected in a few seconds.!");
+       });
+
+       toastr.options = {
+         "closeButton": true,
+         "debug": false,
+         "newestOnTop": false,
+         "progressBar": false,
+         "positionClass": "toast-top-right",
+         "preventDuplicates": false,
+         "onclick": null,
+         "showDuration": "300",
+         "hideDuration": "1000",
+         "timeOut": "5000",
+         "extendedTimeOut": "1000",
+         "showEasing": "swing",
+         "hideEasing": "linear",
+         "showMethod": "fadeIn",
+         "hideMethod": "fadeOut"
+       }
+    </script>
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="http://sotd.us/jordanflickinger/AdvancedWebAppDev/Module5/index.html">The Passing Hand</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <form class="navbar-form navbar-right">
+            <div class="form-group">
+              <input type="text" placeholder="Email" class="form-control">
+            </div>
+            <div class="form-group">
+              <input type="password" placeholder="Password" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-success">Sign in</button>
+          </form>
+        </div><!--/.navbar-collapse -->
+      </div>
+    </nav>
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+      <div class="container">
+        <div class="col-md-5">
+        <h2>Welcome to the Passing Hand!</h2>
+        <p>Please View our pages here.</p>
+      </div>
+      <div class="col-md-7">
+        <a button type="button" href="http://sotd.us/jordanflickinger/AdvancedWebAppDev/Module5/Rolex.html" class="btn btn-primary btn-sm">Rolex</button></a>
+        <a button type="button" href="http://sotd.us/jordanflickinger/AdvancedWebAppDev/Module5/Omega.html" class="btn btn-primary btn-sm">Omega</button></a>
+        <a button type="button" href="http://sotd.us/jordanflickinger/AdvancedWebAppDev/Module5/AudemersPiguet.html" class="btn btn-primary btn-sm">Audemers Piguet</button></a>
+        <a button type="button" href="http://sotd.us/jordanflickinger/AdvancedWebAppDev/Module5/VacheronConstantin.html" class="btn btn-primary btn-sm">Vacheron Constantin</button></a>
+        <a button type="button" href="http://sotd.us/jordanflickinger/AdvancedWebAppDev/Module5/PorscheDesign.html" class="btn btn-primary btn-sm">Porsche Design</button></a>
+        <a button type="button" href="http://sotd.us/jordanflickinger/AdvancedWebAppDev/Module5/FormExample.html" class="btn btn-primary btn-sm">Form</button></a>
+      </div>
+    </div>
+  </div>
+
+  <form>
+    <div class="form-group">
+      <label for="email">Username:</label>
+      <input type="email" class="form-control" id="email">
+    </div>
+    <div class="form-group">
+      <label for="pwd">Password:</label>
+      <input type="password" class="form-control" id="pwd">
+    </div>
+    <div class="checkbox">
+      <label><input type="checkbox"> Remember my username</label>
+    </div>
+    <div class="checkbox">
+      <label><input type="checkbox" value="">Keem Me Signed In</label>
+    </div>
+    <div class="radio">
+        <label><input type="radio" name="optradio">Forgot Password</label>
+      </div>
+      <div class="form-group">
+              <label for="select1">Which Page would you like to view once signed in?</label>
+              <select class="form-control" id="select1">
+                <option>Rolex</option>
+                <option>Omega</option>
+                <option>AudemersPiguet</option>
+                <option>VacheronConstantin</option>
+                <option>PorscheDesign</option>
+                <option>Form</option>
+              </select>
+            </div>
+          </div>
+        </form>
+
+        <script scr="jquery-3.2.1.slim.min.js"></script>
+        <script>
+          $(function(){
+            $("button").on("click", function(){
+              var text = $("Success").text();
+              alert(text);
+            });
+          });
+        </script>
+        <button class="alert">Submit</button>
+
+
+    </body>
+</html>
